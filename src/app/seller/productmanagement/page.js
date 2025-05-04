@@ -2,23 +2,23 @@
 import SideNav from "@/components/SideNav";
 import React from "react";
 import { useEffect } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import Layout from "@/components/Layout";
 import ProductManagement from "@/components/ProductManagement";
-import Loading from "./Loading";
+import Loading from "@/components/Loading";
 
 function Page() {
   const router = useRouter();
-  const { user, loading: authLoading } = useAuthState();
-  const { role, loading: roleLoading } = useUserRole(user?.uid);
+  // const { user, loading: authLoading } = useAuthState();
+  // const { role, loading: roleLoading } = useUserRole(user?.uid);
 
-  useEffect(() => {
-    if (role === "buyer") router.push("/buyer/marketplace");
-  }, [authLoading, roleLoading, role, router]);
+  // useEffect(() => {
+  //   if (role === "buyer") router.push("/buyer/marketplace");
+  // }, [authLoading, roleLoading, role, router]);
 
-  if (authLoading || roleLoading) {
-    return <Loading />;
-  }
+  // if (authLoading || roleLoading) {
+  //   return <Loading />;
+  // }
 
   return (
     <Layout>

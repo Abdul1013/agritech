@@ -7,8 +7,8 @@ const Layout = ({children}) => {
       {/* Side Navigation */}
       <SideNav
         option1={"Marketplace"}
-        option2={"Purchase History"}
-        option3={"Cart"}
+        option2={"Cart"}
+        option3={"Purchase History"}
         option4={"Favorite"}
         userType={"Buyer"}
       />

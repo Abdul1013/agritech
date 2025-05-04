@@ -92,7 +92,7 @@ const Page = () => {
       let errorMessage;
       if (error.code === "auth/email-already-in-use") {
         errorMessage = "This email is already in use. Please try another.";
-      } else if (error.codewha === "auth/weak-password") {
+      } else if (error.code === "auth/weak-password") {
         errorMessage = "Password is too weak. Please use a stronger password.";
       } else {
         errorMessage = "An error occurred. Please try again.";
